@@ -1,22 +1,21 @@
 'use client'
-import { LegacyRef, useEffect, useRef, useState } from "react";
 import Header from "./Header";
-import { animate, inView, scroll } from "motion";
-import { useScroll } from "../hooks/useScrollY";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function CTA(){
-    // using custom hook
-    const scrollY = useScroll();
     return (
-        <section className="relative text-white h-screen mx-auto pt-32 px-6 grid bg-transparent overflow-visible">
-        { /* bg-gradient-to-r from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.5)] */}
+        <section className="text-white h-screen">
           <Header />
-          <article className="z-10 grid grid-cols-12 grid-rows-12 text-white">
-            <h1 className="col-span-4 text-8xl font-bold">Manufacturing excellence across industries</h1>
-            <div className="row-start-2 col-start-8 col-span-5">
-              <div style={{  transform:`translateY(${scrollY * -0.2}px)` }} className={`translate-comp bg-radial-gradient p-10 h-[120%] w-[80%]`}>
-                <p className="text-xl">Exemplefying leadership in manufacturing, this organization delivers high-quality products across various sectors with a commitment to innovation</p>
+          <article className="grid lg:grid-cols-2 lg:grid-rows-2 text-white">
+            <h1 className="z-10 text-5xl w-[90%] lg:text-8xl lg:w-[60%] lg:row-span-2 px-4 py-32 font-bold">Manufacturing excellence across industries</h1>
+            <div className="bg-radial-gradient w-[96%] p-6 mx-auto lg:col-start-2 lg:row-start-2 z-10 grid items-baseline">
+              <div className="">
+                <p className="text-xl py-4">Exemplefying leadership in manufacturing, this organization delivers high-quality products across various sectors with a commitment to innovation</p>
               </div>
+              <button className="flex items-center text-xl p-4 w-fit bg-white text-blue-700 gap-1 col-span-1">
+                Our Values 
+                <FaArrowRight />
+              </button>
             </div>
           </article>
         </section>
