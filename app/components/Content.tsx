@@ -8,7 +8,7 @@ export default function Content({ children }: { children:ReactNode }){
                 <source src="/home_video.mp4" type="video/mp4" />
               </video>
           </div>
-            <div className="px-0 sm:w-[100%] md:w-[100%] w-[85%] mx-auto">
+            <div className="px-0 w-[100%] lg:w-[90%] mx-auto">
             {children}
             </div>
         </section>

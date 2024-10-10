@@ -9,7 +9,7 @@ export default function Header() {
       setOpen((prev) => !prev);
     }
     return (
-        <header className={`relative z-20 w-full m-0 flex items-center justify-between py-4 px-6 transition-colors duration-500 ${isOpen ? 'bg-gradient-to-b from-blue-700 to-blue-800' : 'bg-gradient-to-r from-[rgba(0,0,0,0.0)] to-[rgba(0,0,0,0.0)]'}`}>
+        <header className={`relative z-20 w-full m-0 flex items-center justify-between py-4 transition-colors duration-500 ${isOpen ? 'bg-gradient-to-b from-blue-700 to-blue-800' : 'bg-gradient-to-r from-[rgba(0,0,0,0.0)] to-[rgba(0,0,0,0.0)]'}`}>
         <div className="z-10">
           <Image src={Logo} alt="Nasir Group Logo" />
         </div>
